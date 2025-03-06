@@ -3,48 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Archana</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Archana Booking - Temple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        label, select, input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <h1>Book Archana & Pooja</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="booking.html">Book Archana</a>
-            <a href="donate.html">Donate</a>
-        </nav>
-    </header>
-
     <div class="container">
-        <h2>🛕 Select a Pooja</h2>
-        <form action="YOUR_GOOGLE_FORM_LINK" method="post" target="_blank">
-            <label for="name">Full Name:</label>
-            <label for="name">nakshatram:</label>
-            <label for="name">house name:</label>
-            
+        <h2>Book Your Archana</h2>
+        <form action="submit_booking.php" method="post">
+            <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="pooja">Select Pooja Type:</label>
-            <select id="pooja" name="pooja">
-                <option value="Archana">Archana</option>
-                <option value="Abhishekam">Abhishekam</option>
-                <option value="Ganapathi Homam">Ganapathi Homam</option>
-                <option value="Navagraha Pooja">Navagraha Pooja</option>
-                <option value="Archana">Archana</option>
-                <option value="Abhishekam">Abhishekam</option>
-                <option value="Ganapathi Homam">Ganapathi Homam</option>
-                <option value="Navagraha Pooja">Navagraha Pooja</option>
-                
-            </select>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
 
-            <label for="date">Select Date:</label>
-            <input type="date" id="date" name="date" required>
-
-            <button type="submit">Book Now</button>
-        </form>
-    </div>
-
-</body>
-</html>
+            <label for="archana">Select Archana Type:</label>
+            <select id="archana" name="archana">
+                <option value="ganapathi">Ganapathi Archana - ₹50</option>
+                <option value="lakshmi">Lakshmi Archana - ₹100</option>
+                <option value="shiva">Shiva Archana - ₹100</option>
+                <option value="navagraha">Navagraha Archana - ₹300</option>
+                <option value="mangalya">Mangalya Pooja - ₹500</option>
+                <option value="mrityunjaya">Mrityunjaya Homam - ₹1000</option>
+                <option value="ayush">Ayush Homam - ₹2000</option>
+                <option value="sarpa">Sarpa Dosha Pooja - ₹2500</option>
