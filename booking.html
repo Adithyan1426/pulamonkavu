@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Book Archana & Pooja</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book Archana</a>
+            <a href="donate.html">Donate</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>🛕 Select a Pooja</h2>
+        <form action="YOUR_GOOGLE_FORM_LINK" method="post" target="_blank">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="pooja">Select Pooja Type:</label>
+            <select id="pooja" name="pooja">
+                <option value="Archana">Archana</option>
+                <option value="Abhishekam">Abhishekam</option>
+                <option value="Ganapathi Homam">Ganapathi Homam</option>
+                <option value="Navagraha Pooja">Navagraha Pooja</option>
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
