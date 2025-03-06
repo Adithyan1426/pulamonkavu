@@ -4,54 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
-            text-align: center;
-        }
-        .temple-img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-        }
-        .book-now, .gallery, .details {
-            margin-top: 20px;
-        }
-        .book-now a, .gallery a, .details a {
-            text-decoration: none;
-            display: inline-block;
-            background: green;
-            color: white;
-            padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <header>
+        <h1>[Your Temple Name]</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book Archana</a>
+            <a href="donate.html">Donate</a>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Pulamonkavu Sreemahadeva Temple</h1>
         <img src="images/temple.jpg" alt="Temple Image" class="temple-img">
-        <p>Welcome to the sacred Pulamonkavu Sreemahadeva Temple. Experience spiritual peace and book your Archana or Pooja online.</p>
+        <p>Welcome to the sacred [Your Temple Name]. Experience spiritual peace and book your Archana or Pooja online.</p>
         
-        <h2>🔕 Temple Timings</h2>
+        <h2>🛕 Temple Timings</h2>
         <p>Monday - Sunday: 6:00 AM - 8:00 PM</p>
 
         <h2>📍 Location</h2>
@@ -60,18 +30,8 @@
         <h2>📞 Contact Us</h2>
         <p>📞 Phone: +91 XXXXXXXXXX</p>
         <p>📧 Email: temple@example.com</p>
-
-        <div class="book-now">
-            <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank">Book Now</a>
-        </div>
-        
-        <div class="gallery">
-            <a href="gallery.html">View Gallery</a>
-        </div>
-        
-        <div class="details">
-            <a href="details.html">More Details</a>
-        </div>
     </div>
+
 </body>
 </html>
+
