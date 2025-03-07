@@ -6,7 +6,7 @@ html {
 /* Reset default margin and prevent content hiding under header */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #bdbdbd ;
     text-align: center;
     margin: 0;
     padding-top: 80px; /* Prevents first section from hiding under the fixed header */
