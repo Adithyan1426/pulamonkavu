@@ -91,20 +91,33 @@ section {
     gap: 20px;
 }
 
-.ritual {
+.ritual-card {
     background-color: #fdf5e6; /* Light beige */
-    padding: 20px;
+    border-radius: 10px;
     width: 90%;
     max-width: 400px;
-    border-radius: 10px;
-    text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ritual-card:hover {
+    transform: scale(1.05);
+}
+
+.ritual-header {
+    background-color: #ffe0b2; /* Light orange header */
+    padding: 20px;
 }
 
 .ritual-icon {
     width: 50px;
     height: 50px;
-    margin-bottom: 10px;
+}
+
+.ritual-content {
+    padding: 20px;
 }
 
 .read-more {
@@ -118,4 +131,3 @@ section {
 .read-more:hover {
     text-decoration: underline;
 }
-
