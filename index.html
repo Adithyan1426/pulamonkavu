@@ -37,62 +37,7 @@
             background: goldenrod;
         }
 
-        /* Sidebar Icon */
-        .sidebar-icon {
-            position: fixed;
-            top: 20px;
-            left: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            background: goldenrod;
-            padding: 10px;
-            border-radius: 5px;
-            color: white;
-            z-index: 1000;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            position: fixed;
-            left: -250px;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            transition: 0.3s;
-            padding-top: 50px;
-            z-index: 999;
-        }
-
-        .sidebar a {
-            display: block;
-            padding: 15px;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-            text-align: center;
-        }
-
-        .sidebar a:hover {
-            background: goldenrod;
-        }
-
-        .sidebar.active {
-            left: 0;
-        }
-
-        /* Close Button */
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: white;
-        }
-
-        /* Booking Button */
+        /* Booking and More Details Button */
         .booking-icon {
             display: block;
             width: fit-content;
@@ -159,6 +104,66 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        /* Read More Toggle */
+        .read-more-content {
+            display: none;
+        }
+
+        /* Rituals Section - Box Styling */
+        .rituals {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .ritual-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .ritual-card:hover {
+            transform: scale(1.05);
+        }
+
+        .ritual-header {
+            background: #f7ca18;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .ritual-content h2 {
+            font-size: 22px;
+            margin-top: 10px;
+            color: #d35400;
+        }
+
+        .ritual-content p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: goldenrod;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .read-more:hover {
+            background: darkgoldenrod;
+        }
+
         /* Footer */
         .footer {
             background: #222;
@@ -169,27 +174,21 @@
         }
     </style>
     <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById("sidebar");
-            sidebar.classList.toggle("active");
+        function toggleReadMore(section) {
+            var content = document.getElementById(section + "-content");
+            var button = document.getElementById(section + "-btn");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.innerText = "Read Less";
+            } else {
+                content.style.display = "none";
+                button.innerText = "Read More";
+            }
         }
     </script>
 </head>
 <body>
-
-    <!-- Sidebar Icon (Menu Button) -->
-    <div class="sidebar-icon" onclick="toggleSidebar()">☰</div>
-
-    <!-- Sidebar Navigation -->
-    <div id="sidebar" class="sidebar">
-        <div class="close-btn" onclick="toggleSidebar()">✖</div>
-        <a href="#about">About</a>
-        <a href="#poojas">Our Poojas</a>
-        <a href="#contact">Contact</a>
-        <a href="booking.html">Booking</a>
-        <a href="gallery.html">Gallery</a>
-    </div>
-
+    
     <!-- Scrollable Navigation Bar -->
     <div class="navbar-container">
         <div class="navbar">
@@ -218,6 +217,26 @@
     <div class="section" id="poojas">
         <h2>Our Poojas</h2>
         <p>Experience the divine rituals and blessings through our sacred poojas.</p>
+        
+        <div class="rituals">
+            <div class="ritual-card">
+                <div class="ritual-header"></div>
+                <div class="ritual-content">
+                    <h2>JALA DHARA</h2>
+                    <p><strong>Jala Dhara</strong> is a sacred ritual in Shiva temples where a continuous stream of water is poured on the deity.</p>
+                    <a href="jala_dhara.html" class="read-more">Read More...</a>
+                </div>
+            </div>
+
+            <div class="ritual-card">
+                <div class="ritual-header"></div>
+                <div class="ritual-content">
+                    <h2>ALUVILAKKU</h2>
+                    <p>A lamp with 365 wicks in the shape of a pipal tree is lighted using ghee.</p>
+                    <a href="aluvilakku.html" class="read-more">Read More...</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Contact Section -->
@@ -232,7 +251,5 @@
     <div class="footer">
         &copy; 2025 Pulamankavu Sree Mahadeva Temple. All Rights Reserved.
     </div>
-
 </body>
 </html>
-
