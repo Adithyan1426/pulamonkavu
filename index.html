@@ -12,7 +12,47 @@
             background: #f5f5f5;
         }
 
-        /* Full-screen Hero Section */
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+        
+        .navbar a:hover {
+            background: goldenrod;
+        }
+
+        /* Booking Icon */
+        .booking-icon {
+            display: block;
+            text-align: center;
+            background: goldenrod;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 50px;
+        }
+        
+        .booking-icon:hover {
+            background: darkgoldenrod;
+        }
+
+        /* Hero Section */
         .hero {
             height: 20vh;
             background-image: url('temple3.jfif');
@@ -27,71 +67,10 @@
             font-size: 28px;
             font-weight: bold;
             position: relative;
-        }
-        
-        /* Navbar */
-        .navbar {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-            display: flex;
-            justify-content: flex-start;
-            overflow-x: auto;
-            white-space: nowrap;
-            z-index: 1000;
-        }
-        
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: 0.3s;
-            font-size: 14px;
-        }
-        
-        .navbar a:hover {
-            background: goldenrod;
+            margin-top: 10px;
         }
 
-        /* Dropdown Navigation Icon */
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: goldenrod;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1100;
-        }
-
-        .dropdown:hover .navbar {
-            display: block;
-        }
-
-        /* Booking and More Details Icon */
-        .booking-icon {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: goldenrod;
-            padding: 10px 15px;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            z-index: 1100;
-        }
-
-        .booking-icon:hover {
-            background: darkgoldenrod;
-        }
-        
+        /* Notice */
         .notice {
             width: 100%;
             background: darkred;
@@ -99,8 +78,8 @@
             padding: 10px 0;
             overflow: hidden;
             white-space: nowrap;
-            position: relative;
-            margin-top: 50px;
+            text-align: center;
+            margin-top: 10px;
         }
 
         .notice-text {
@@ -113,54 +92,9 @@
             from { transform: translateX(0%); }
             to { transform: translateX(-100%); }
         }
-
-        /* Content Sections */
-        .section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .gallery img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Footer */
-        .footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
     </style>
 </head>
 <body>
-    
-    <div class="hero">
-        Welcome to Pulamankavu Sree Mahadeva Temple
-    </div>
-
-    <!-- Dropdown Navigation Icon -->
-    <div class="dropdown">☰ Menu</div>
-
-    <!-- Booking and More Details Icon -->
-    <a href="booking.html" class="booking-icon">📖 Book Archana / More Details</a>
-
-    <!-- Moving Notice -->
-    <div class="notice">
-        <span class="notice-text">⚠️ Important Notice: The temple festival starts on March 15th. Join us for the grand celebrations! ⚠️</span>
-    </div>
-
     <!-- Navigation Bar -->
     <div class="navbar">
         <a href="#about">About</a>
@@ -169,43 +103,20 @@
         <a href="booking.html">Booking</a>
         <a href="gallery.html">Gallery</a>
         <a href="#gallery">Gallery</a>
-        <a href="More details">More</a>
+        <a href="#more">More</a>
     </div>
 
-    <!-- About Section -->
-    <div class="section" id="about">
-        <h2>About the Temple</h2>
-        <p>Experience spiritual peace and divine blessings at Pulamankavu Sree Mahadeva Temple.</p>
+    <!-- Booking Icon -->
+    <a href="booking.html" class="booking-icon">📖 Book Archana / More Details</a>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        Welcome to Pulamankavu Sree Mahadeva Temple
     </div>
 
-    <!-- Timings Section -->
-    <div class="section" id="timing">
-        <h2>Temple Timings</h2>
-        <p>Monday - Sunday: 6:00 AM - 8:00 PM</p>
+    <!-- Moving Notice -->
+    <div class="notice">
+        <span class="notice-text">⚠️ Important Notice: The temple festival starts on March 15th. Join us for the grand celebrations! ⚠️</span>
     </div>
-
-    <!-- Gallery Section -->
-    <div class="section" id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="temple2.jpeg" alt="Temple 1">
-            <img src="temple4.jfif" alt="Temple 2">
-            <img src="temple3.jfif" alt="Temple 3">
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="section" id="contact">
-        <h2>Contact Us</h2>
-        <p>📞 +91 XXXXXXXXXX</p>
-        <p>📍 <a href="https://maps.app.goo.gl/WyiVJQmBKFvHnU3DA" target="_blank">View on Google Maps</a></p>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        &copy; 2025 Pulamankavu Sree Mahadeva Temple. All Rights Reserved.
-    </div>
-
 </body>
 </html>
-
