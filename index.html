@@ -104,7 +104,24 @@
             padding: 20px;
             margin-top: 30px;
         }
+
+        .read-more-content {
+            display: none;
+        }
     </style>
+    <script>
+        function toggleReadMore(section) {
+            var content = document.getElementById(section + "-content");
+            var button = document.getElementById(section + "-btn");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.innerText = "Read Less";
+            } else {
+                content.style.display = "none";
+                button.innerText = "Read More";
+            }
+        }
+    </script>
 </head>
 <body>
     
@@ -138,29 +155,21 @@
     <div class="section" id="about">
         <h2>About</h2>
         <p>
-            Pulamonkavu Sreemahadeva Temple, located in Maranadu, Kerala, is a revered Hindu shrine dedicated to Lord Shiva. 
-            The temple's origins trace back several centuries, reflecting the rich spiritual heritage of the region. 
-            Architecturally, it showcases traditional Kerala temple design, featuring intricate woodwork and a sloping tiled roof. 
-            The temple serves as a focal point for local festivals, especially during the annual Maha Shivaratri celebration, attracting devotees from various parts of the state. 
+            Pulamonkavu Sreemahadeva Temple, located in Maranadu, Kerala, is a revered Hindu shrine dedicated to Lord Shiva.
         </p>
-    </div>
-
-    <!-- Pooja Timings Section -->
-    <div class="section" id="timing">
-        <h2>Pooja Timings</h2>
-        <ul>
-            <li>Morning Pooja: 5:30 AM - 7:00 AM</li>
-            <li>Ucha Pooja (Midday): 12:00 PM - 1:00 PM</li>
-            <li>Evening Pooja: 6:00 PM - 7:30 PM</li>
-            <li>Special Rituals: During festival days</li>
-        </ul>
+        <div id="about-content" class="read-more-content">
+            <p>The temple's origins trace back several centuries, reflecting the rich spiritual heritage of the region. 
+            Architecturally, it showcases traditional Kerala temple design, featuring intricate woodwork and a sloping tiled roof. 
+            The temple serves as a focal point for local festivals, especially during the annual Maha Shivaratri celebration, attracting devotees from various parts of the state.</p>
+        </div>
+        <button id="about-btn" onclick="toggleReadMore('about')">Read More</button>
     </div>
 
     <!-- Our Poojas Section -->
     <div class="section poojas" id="poojas">
         <h2>Our Poojas</h2>
         <p>Experience the divine rituals and blessings through our sacred poojas.</p>
-        <div class="poojas-content">
+        <div id="poojas-content" class="read-more-content">
             <h3>Ganapathi Homam</h3>
             <p>A powerful ritual dedicated to Lord Ganesha to remove obstacles and bring success and prosperity.</p>
             <h3>Nithya Pooja</h3>
@@ -170,7 +179,7 @@
             <h3>Rudrabhishekam</h3>
             <p>A ritual performed with Vedic chants to invoke Lord Shiva's blessings for inner peace and prosperity.</p>
         </div>
-        <button class="read-more-btn" onclick="togglePoojas()">Read More</button>
+        <button id="poojas-btn" onclick="toggleReadMore('poojas')">Read More</button>
     </div>
 
     <!-- Contact Section -->
