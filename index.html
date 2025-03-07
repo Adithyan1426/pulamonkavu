@@ -48,7 +48,50 @@
         .navbar a:hover {
             background: goldenrod;
         }
+
+        /* Booking and More Details Icon */
+        .booking-icon {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: goldenrod;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .booking-icon:hover {
+            background: darkgoldenrod;
+        }
         
+        /* Moving Notice */
+        .notice {
+            width: 100%;
+            background: darkred;
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: fixed;
+            top: 50px;
+            z-index: 999;
+        }
+
+        .notice-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: moveNotice 15s linear infinite;
+        }
+
+        @keyframes moveNotice {
+            from { transform: translateX(0%); }
+            to { transform: translateX(-100%); }
+        }
+
         /* Content Sections */
         .section {
             padding: 50px 20px;
@@ -85,6 +128,14 @@
         Welcome to Pulamankavu Sree Mahadeva Temple
     </div>
 
+    <!-- Booking and More Details Icon -->
+    <a href="booking.html" class="booking-icon">📖 Book Archana / More Details</a>
+
+    <!-- Moving Notice -->
+    <div class="notice">
+        <span class="notice-text">⚠️ Important Notice: The temple festival starts on March 15th. Join us for the grand celebrations! ⚠️</span>
+    </div>
+
     <!-- Navigation Bar -->
     <div class="navbar">
         <a href="#about">About</a>
@@ -109,9 +160,9 @@
     <div class="section" id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="temple.png.jpeg" alt="Temple 1">
-            <img src="temple2.jpeg" alt="Temple 2">
-            <img src="temple3.jfif" alt="Temple 3">
+            <img src="temple1.jpg" alt="Temple 1">
+            <img src="temple2.jpg" alt="Temple 2">
+            <img src="temple3.jpg" alt="Temple 3">
         </div>
     </div>
 
