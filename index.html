@@ -96,24 +96,35 @@
             to { transform: translateX(-100%); }
         }
 
-        /* Content Sections */
-        .section {
+        /* Our Poojas Section */
+        .poojas {
             padding: 50px 20px;
             text-align: center;
         }
 
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
+        .poojas-content {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
         }
 
-        .gallery img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        .poojas-content h3 {
+            color: goldenrod;
+        }
+
+        .read-more-btn {
+            background: goldenrod;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .read-more-btn:hover {
+            background: darkgoldenrod;
         }
 
         /* Footer */
@@ -133,11 +144,11 @@
         <div class="navbar">
             <a href="#about">About</a>
             <a href="#timing">Timings</a>
+            <a href="#poojas">Our Poojas</a>
             <a href="#contact">Contact</a>
             <a href="booking.html">Booking</a>
             <a href="gallery.html">Gallery</a>
-            <a href="#gallery">Gallery</a>
-            <a href="More.html">More</a>
+            <a href="more-details.html">More</a>
         </div>
     </div>
 
@@ -154,33 +165,21 @@
         <span class="notice-text">⚠️ Important Notice: The temple festival starts on March 15th. Join us for the grand celebrations! ⚠️</span>
     </div>
 
-    <!-- About Section -->
-    <div class="section" id="about">
-        <h2>About the Temple</h2>
-        <p>Experience spiritual peace and divine blessings at Pulamankavu Sree Mahadeva Temple.</p>
-    </div>
-
-    <!-- Timings Section -->
-    <div class="section" id="timing">
-        <h2>Temple Timings</h2>
-        <p>Monday - Sunday: 6:00 AM - 8:00 PM</p>
-    </div>
-
-    <!-- Gallery Section -->
-    <div class="section" id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="temple2.jpeg" alt="Temple 1">
-            <img src="temple4.jfif" alt="Temple 2">
-            <img src="temple3.jfif" alt="Temple 3">
+    <!-- Our Poojas Section -->
+    <div class="section poojas" id="poojas">
+        <h2>Our Poojas</h2>
+        <p>Experience the divine rituals and blessings through our sacred poojas.</p>
+        <div class="poojas-content">
+            <h3>Ganapathi Homam</h3>
+            <p>A powerful ritual dedicated to Lord Ganesha to remove obstacles and bring success and prosperity.</p>
+            <h3>Nithya Pooja</h3>
+            <p>Daily offerings to the deity ensuring peace, health, and well-being of devotees.</p>
+            <h3>Maha Mrityunjaya Homam</h3>
+            <p>A sacred fire ritual dedicated to Lord Shiva for health, longevity, and protection from misfortunes.</p>
+            <h3>Rudrabhishekam</h3>
+            <p>A ritual performed with Vedic chants to invoke Lord Shiva's blessings for inner peace and prosperity.</p>
         </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="section" id="contact">
-        <h2>Contact Us</h2>
-        <p>📞 +91 XXXXXXXXXX</p>
-        <p>📍 <a href="https://maps.app.goo.gl/WyiVJQmBKFvHnU3DA" target="_blank">View on Google Maps</a></p>
+        <button class="read-more-btn" onclick="togglePoojas()">Read More</button>
     </div>
 
     <!-- Footer -->
@@ -188,6 +187,18 @@
         &copy; 2025 Pulamankavu Sree Mahadeva Temple. All Rights Reserved.
     </div>
 
+    <script>
+        function togglePoojas() {
+            var content = document.querySelector('.poojas-content');
+            var button = document.querySelector('.read-more-btn');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                button.innerText = 'Read Less';
+            } else {
+                content.style.display = 'none';
+                button.innerText = 'Read More';
+            }
+        }
+    </script>
 </body>
 </html>
-
