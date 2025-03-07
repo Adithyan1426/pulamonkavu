@@ -14,11 +14,15 @@
 
         /* Full-screen Hero Section */
         .hero {
-            height: 100vh;
+            height: 20vh;
+            background-image: url('temple3.jfif');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: black;
+            color: white;
             text-align: center;
             font-size: 28px;
             font-weight: bold;
@@ -33,7 +37,7 @@
             background: rgba(0, 0, 0, 0.8);
             padding: 10px 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             overflow-x: auto;
             white-space: nowrap;
             z-index: 1000;
@@ -44,6 +48,7 @@
             text-decoration: none;
             padding: 10px 15px;
             transition: 0.3s;
+            font-size: 14px;
         }
         
         .navbar a:hover {
@@ -70,7 +75,6 @@
             background: darkgoldenrod;
         }
         
-        /* Moving Notice */
         .notice {
             width: 100%;
             background: darkred;
@@ -78,9 +82,8 @@
             padding: 10px 0;
             overflow: hidden;
             white-space: nowrap;
-            position: fixed;
-            top: 60px;
-            z-index: 999;
+            position: relative;
+            margin-top: 50px;
         }
 
         .notice-text {
@@ -142,9 +145,11 @@
     <div class="navbar">
         <a href="#about">About</a>
         <a href="#timing">Timings</a>
-        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
         <a href="booking.html">Booking</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#gallery">Gallery</a>
+        <a href="More details">More</a>
     </div>
 
     <!-- About Section -->
@@ -163,8 +168,9 @@
     <div class="section" id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="temple1.jpg" alt="Temple 1">
-            <img src="temple2.jpg" alt="Temple 2">
+            <img src="temple2.jpeg" alt="Temple 1">
+            <img src="temple4.jfif" alt="Temple 2">
+            <img src="temple3.jfif" alt="Temple 3">
         </div>
     </div>
 
