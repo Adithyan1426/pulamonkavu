@@ -6,31 +6,70 @@
     <title>Temple Home</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        h1 {
-            margin-bottom: 20px; /* Adds space below the heading */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #111;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
         .temple-img {
             display: block;
-            margin: 100px auto; /* Adds space above and centers the image */
+            margin: 50px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
+
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Pulamankavu Sree Mahadeva Temple</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="booking.html">Book Archana</a>
-            <a href="More detalis.html">More details</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
-    </header>
+    <div class="sidebar">
+        <h2 style="color:white; text-align:center;">Temple Menu</h2>
+        <a href="index.html">🏠 Home</a>
+        <a href="booking.html">📖 Book Archana</a>
+        <a href="more-details.html">📜 More Details</a>
+        <a href="gallery.html">🖼 Gallery</a>
+    </div>
 
-    <div class="container">
+    <div class="content">
+        <h1>Pulamankavu Sree Mahadeva Temple</h1>
         <img src="temple3.jfif" alt="Temple Image" class="temple-img">
-        <p>Welcome to the sacred [Pulamankavu Sree Mahadeva Temple]. Experience spiritual peace and book your Archana or Pooja online.</p>
         
+        <p>Welcome to the sacred Pulamankavu Sree Mahadeva Temple. Experience spiritual peace and book your Archana or Pooja online.</p>
+
         <h2>🛕 Temple Timings</h2>
         <p>Monday - Sunday: 6:00 AM - 8:00 PM</p>
 
@@ -44,9 +83,3 @@
 
 </body>
 </html>
-        <p>📧 Email: temple@example.com</p>
-    </div>
-
-</body>
-</html>
-
