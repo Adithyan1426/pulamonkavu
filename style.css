@@ -84,3 +84,38 @@ section {
     background: navy;
     transform: scale(1.05);
 }
+.rituals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ritual {
+    background-color: #fdf5e6; /* Light beige */
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ritual-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e67e22; /* Orange color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
