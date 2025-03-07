@@ -12,61 +12,6 @@
             background-color: #f4f4f4;
         }
 
-        /* Left Sidebar */
-        .sidebar {
-            height: 100vh;
-            width: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: linear-gradient(to bottom, #222, #444);
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-
-        .sidebar a {
-            padding: 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-            transition: 0.3s ease-in-out;
-        }
-
-        .sidebar a:hover {
-            background-color: #575757;
-        }
-
-        /* Close Button */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 25px;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Menu Icon (Left Sidebar) */
-        .menu-icon {
-            font-size: 30px;
-            cursor: pointer;
-            position: fixed;
-            top: 10px;
-            left: 15px;
-            background-color: #111;
-            color: green;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .menu-icon:hover {
-            background-color: green;
-            color: white;
-        }
-
         /* Top Drop-down Menu */
         .dropdown-menu {
             position: fixed;
@@ -94,7 +39,7 @@
             background-color: #575757;
         }
 
-        /* Drop-down Icon */
+        /* Drop-down Menu Icon */
         .drop-icon {
             font-size: 30px;
             cursor: pointer;
@@ -157,18 +102,10 @@
 </head>
 <body>
 
-    <!-- Left Sidebar -->
-    <div class="menu-icon" onclick="openSidebar()">☰</div>
-    <div class="sidebar" id="sidebar">
-        <span class="close-btn" onclick="closeSidebar()">✖</span>
-        <a href="index.html">🏠 Home</a>
-        <a href="booking.html">📖 Book Archana</a>
-        <a href="More.html">📜 More Details</a>
-        <a href="gallery.html">🖼 Gallery</a>
-    </div>
+    <!-- Top Drop-down Menu Icon -->
+    <div class="drop-icon" onclick="toggleDropdown()">▼</div>
 
     <!-- Top Drop-down Menu -->
-    <div class="drop-icon" onclick="toggleDropdown()">▼</div>
     <div class="dropdown-menu" id="dropdownMenu">
         <a href="index.html">🏠 Home</a>
         <a href="booking.html">📖 Book Archana</a>
@@ -204,14 +141,6 @@
 
     <!-- JavaScript -->
     <script>
-        function openSidebar() {
-            document.getElementById("sidebar").style.width = "250px";
-        }
-
-        function closeSidebar() {
-            document.getElementById("sidebar").style.width = "0";
-        }
-
         function toggleDropdown() {
             var menu = document.getElementById("dropdownMenu");
             if (menu.style.height === "200px") {
