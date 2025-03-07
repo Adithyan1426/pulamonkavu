@@ -9,18 +9,19 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
 
-        /* Sidebar */
+        /* Left Sidebar */
         .sidebar {
             height: 100vh;
             width: 0;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #111;
+            background: linear-gradient(to bottom, #222, #444);
             overflow-x: hidden;
-            transition: 0.3s;
+            transition: 0.5s;
             padding-top: 60px;
         }
 
@@ -28,16 +29,16 @@
             padding: 15px;
             text-decoration: none;
             font-size: 18px;
-            color: grey;
+            color: white;
             display: block;
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
         }
 
         .sidebar a:hover {
             background-color: #575757;
         }
 
-        /* Close button */
+        /* Close Button */
         .close-btn {
             position: absolute;
             top: 10px;
@@ -47,23 +48,74 @@
             cursor: pointer;
         }
 
-        /* Hamburger icon */
+        /* Menu Icon (Left Sidebar) */
         .menu-icon {
             font-size: 30px;
             cursor: pointer;
             position: fixed;
-            top: 15px;
+            top: 10px;
             left: 15px;
             background-color: #111;
             color: green;
             padding: 10px 15px;
             border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .menu-icon:hover {
+            background-color: green;
+            color: white;
+        }
+
+        /* Top Drop-down Menu */
+        .dropdown-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(to bottom, #222, #444);
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            transition: 0.3s ease-in-out;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #575757;
+        }
+
+        /* Drop-down Icon */
+        .drop-icon {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            right: 15px;
+            background-color: #111;
+            color: blue;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .drop-icon:hover {
+            background-color: blue;
+            color: white;
         }
 
         .content {
-            margin-left: 20px;
             padding: 20px;
-            transition: margin-left 0.3s;
+            margin-top: 50px;
         }
 
         h1 {
@@ -76,15 +128,37 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
         }
+
+        /* Navigation Below Contact Section */
+        .bottom-nav {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(to bottom, #222, #444);
+        }
+
+        .bottom-nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            margin: 10px;
+            display: inline-block;
+            padding: 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .bottom-nav a:hover {
+            background-color: #575757;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Menu Icon (Hamburger) -->
+    <!-- Left Sidebar -->
     <div class="menu-icon" onclick="openSidebar()">☰</div>
-
-    <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
         <span class="close-btn" onclick="closeSidebar()">✖</span>
         <a href="index.html">🏠 Home</a>
@@ -93,8 +167,17 @@
         <a href="gallery.html">🖼 Gallery</a>
     </div>
 
+    <!-- Top Drop-down Menu -->
+    <div class="drop-icon" onclick="toggleDropdown()">▼</div>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">🏠 Home</a>
+        <a href="booking.html">📖 Book Archana</a>
+        <a href="More.html">📜 More Details</a>
+        <a href="gallery.html">🖼 Gallery</a>
+    </div>
+
     <!-- Main Content -->
-    <div class="content" id="main-content">
+    <div class="content">
         <h1>Pulamankavu Sree Mahadeva Temple</h1>
         <img src="temple3.jfif" alt="Temple Image" class="temple-img">
         
@@ -109,24 +192,33 @@
         <h2>📞 Contact Us</h2>
         <p>📞 Phone: +91 XXXXXXXXXX</p>
         <p>📧 Email: temple@example.com</p>
-         <nav>
-            <a href="index.html">Home</a>
-            <a href="booking.html">Book Archana</a>
-            <a href="More detalis.html">More details</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="index.html">🏠 Home</a>
+            <a href="booking.html">📖 Book Archana</a>
+            <a href="More.html">📜 More Details</a>
+            <a href="gallery.html">🖼 Gallery</a>
+        </div>
     </div>
 
-    <!-- JavaScript to Control Sidebar -->
+    <!-- JavaScript -->
     <script>
         function openSidebar() {
             document.getElementById("sidebar").style.width = "250px";
-            document.getElementById("main-content").style.marginLeft = "260px";
         }
 
         function closeSidebar() {
             document.getElementById("sidebar").style.width = "0";
-            document.getElementById("main-content").style.marginLeft = "20px";
+        }
+
+        function toggleDropdown() {
+            var menu = document.getElementById("dropdownMenu");
+            if (menu.style.height === "200px") {
+                menu.style.height = "0";
+            } else {
+                menu.style.height = "200px";
+            }
         }
     </script>
 
