@@ -72,18 +72,16 @@
             background: darkgoldenrod;
         }
         
-        /* Moving Notice */
-        .notice {
-            width: 100%;
-            background: darkred;
-            color: white;
-            padding: 10px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: fixed;
-            top: 10px;
-            z-index: 999;
-        }
+       .notice {
+    width: 100%;
+    background: darkred;
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative; /* Change from fixed to relative */
+    margin-top: 20px; /* Adjust as needed to move it further down */
+}
 
         .notice-text {
             display: inline-block;
