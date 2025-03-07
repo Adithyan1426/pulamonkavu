@@ -96,37 +96,6 @@
             to { transform: translateX(-100%); }
         }
 
-        /* Our Poojas Section */
-        .poojas {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .poojas-content {
-            display: none;
-            margin-top: 10px;
-            text-align: left;
-        }
-
-        .poojas-content h3 {
-            color: goldenrod;
-        }
-
-        .read-more-btn {
-            background: goldenrod;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .read-more-btn:hover {
-            background: darkgoldenrod;
-        }
-
         /* Footer */
         .footer {
             background: #222;
@@ -164,31 +133,28 @@
     <div class="notice">
         <span class="notice-text">⚠️ Important Notice: The temple festival starts on March 15th. Join us for the grand celebrations! ⚠️</span>
     </div>
-    </div>
 
     <!-- About Section -->
     <div class="section" id="about">
-        <h2>About the Temple</h2>
-        <p>Experience spiritual peace and divine blessings at Pulamankavu Sree Mahadeva Temple.</p>
+        <h2>About</h2>
+        <p>
+            Pulamonkavu Sreemahadeva Temple, located in Maranadu, Kerala, is a revered Hindu shrine dedicated to Lord Shiva. 
+            The temple's origins trace back several centuries, reflecting the rich spiritual heritage of the region. 
+            Architecturally, it showcases traditional Kerala temple design, featuring intricate woodwork and a sloping tiled roof. 
+            The temple serves as a focal point for local festivals, especially during the annual Maha Shivaratri celebration, attracting devotees from various parts of the state. 
+        </p>
     </div>
 
-    <!-- Timings Section -->
+    <!-- Pooja Timings Section -->
     <div class="section" id="timing">
-        <h2>Temple Timings</h2>
-        <p>Monday - Sunday: 6:00 AM - 8:00 PM</p>
+        <h2>Pooja Timings</h2>
+        <ul>
+            <li>Morning Pooja: 5:30 AM - 7:00 AM</li>
+            <li>Ucha Pooja (Midday): 12:00 PM - 1:00 PM</li>
+            <li>Evening Pooja: 6:00 PM - 7:30 PM</li>
+            <li>Special Rituals: During festival days</li>
+        </ul>
     </div>
-
-   
-    </div>
-
-    <!-- Contact Section -->
-    <div class="section" id="contact">
-        <h2>Contact Us</h2>
-        <p>📞 +91 XXXXXXXXXX</p>
-        <p>📍 <a href="https://maps.app.goo.gl/WyiVJQmBKFvHnU3DA" target="_blank">View on Google Maps</a></p>
-    </div>
-
-
 
     <!-- Our Poojas Section -->
     <div class="section poojas" id="poojas">
@@ -207,23 +173,17 @@
         <button class="read-more-btn" onclick="togglePoojas()">Read More</button>
     </div>
 
+    <!-- Contact Section -->
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 Pulamankavu Sree Mahadeva Temple, Maranadu, Kerala</p>
+        <p>📞 Phone: +91 98765 43210</p>
+        <p>📧 Email: info@pulamankavutemple.com</p>
+    </div>
+
     <!-- Footer -->
     <div class="footer">
         &copy; 2025 Pulamankavu Sree Mahadeva Temple. All Rights Reserved.
     </div>
-
-    <script>
-        function togglePoojas() {
-            var content = document.querySelector('.poojas-content');
-            var button = document.querySelector('.read-more-btn');
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-                button.innerText = 'Read Less';
-            } else {
-                content.style.display = 'none';
-                button.innerText = 'Read More';
-            }
-        }
-    </script>
 </body>
 </html>
