@@ -3,153 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pulamankavu Temple</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: #f5f5f5;
         }
 
-        /* Top Drop-down Menu */
-        .dropdown-menu {
+        /* Full-screen Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('temple.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        /* Navbar */
+        .navbar {
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
-            height: 0;
-            background: linear-gradient(to bottom, #222, #444);
-            overflow: hidden;
-            transition: height 0.5s ease-in-out;
-            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
         }
-
-        .dropdown-menu a {
-            display: block;
-            text-align: center;
-            padding: 15px;
+        
+        .navbar a {
+            color: white;
             text-decoration: none;
-            font-size: 18px;
-            color: white;
-            transition: 0.3s ease-in-out;
+            padding: 15px 20px;
+            transition: 0.3s;
+        }
+        
+        .navbar a:hover {
+            background: goldenrod;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        .dropdown-menu a:hover {
-            background-color: #575757;
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        /* Drop-down Menu Icon */
-        .drop-icon {
-            font-size: 30px;
-            cursor: pointer;
-            position: fixed;
-            top: 10px;
-            right: 15px;
-            background-color: #111;
-            color: blue;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .drop-icon:hover {
-            background-color: blue;
-            color: white;
-        }
-
-        .content {
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .temple-img {
-            display: block;
-            margin: 50px auto;
-            max-width: 100%;
+        .gallery img {
+            width: 300px;
             height: auto;
             border-radius: 10px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        /* Navigation Below Contact Section */
-        .bottom-nav {
-            text-align: center;
-            margin-top: 20px;
-            padding: 20px;
-            background: linear-gradient(to bottom, #222, #444);
-        }
-
-        .bottom-nav a {
-            text-decoration: none;
-            font-size: 18px;
+        /* Footer */
+        .footer {
+            background: #222;
             color: white;
-            margin: 10px;
-            display: inline-block;
-            padding: 10px;
-            transition: 0.3s ease-in-out;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
         }
-
-        .bottom-nav a:hover {
-            background-color: #575757;
-        }
-
     </style>
 </head>
 <body>
-
-    <!-- Top Drop-down Menu Icon -->
-    <div class="drop-icon" onclick="toggleDropdown()">▼</div>
-
-    <!-- Top Drop-down Menu -->
-    <div class="dropdown-menu" id="dropdownMenu">
-        <a href="index.html">🏠 Home</a>
-        <a href="booking.html">📖 Book Archana</a>
-        <a href="More.html">📜 More Details</a>
-        <a href="gallery.html">🖼 Gallery</a>
+    
+    <div class="hero">
+        Welcome to Pulamankavu Sree Mahadeva Temple
     </div>
 
-    <!-- Main Content -->
-    <div class="content">
-        <h1>Pulamankavu Sree Mahadeva Temple</h1>
-        <img src="temple3.jfif" alt="Temple Image" class="temple-img">
-        
-        <p>Welcome to the sacred Pulamankavu Sree Mahadeva Temple. Experience spiritual peace and book your Archana or Pooja online.</p>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#timing">Timings</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-        <h2>🛕 Temple Timings</h2>
+    <!-- About Section -->
+    <div class="section" id="about">
+        <h2>About the Temple</h2>
+        <p>Experience spiritual peace and divine blessings at Pulamankavu Sree Mahadeva Temple.</p>
+    </div>
+
+    <!-- Timings Section -->
+    <div class="section" id="timing">
+        <h2>Temple Timings</h2>
         <p>Monday - Sunday: 6:00 AM - 8:00 PM</p>
+    </div>
 
-        <h2>📍 Location</h2>
-        <p><a href="https://maps.app.goo.gl/WyiVJQmBKFvHnU3DA" target="_blank">View on Google Maps</a></p>
-
-        <h2>📞 Contact Us</h2>
-        <p>📞 Phone: +91 XXXXXXXXXX</p>
-        <p>📧 Email: temple@example.com</p>
-
-        <!-- Bottom Navigation -->
-        <div class="bottom-nav">
-            <a href="index.html">🏠 Home</a>
-            <a href="booking.html">📖 Book Archana</a>
-            <a href="More.html">📜 More Details</a>
-            <a href="gallery.html">🖼 Gallery</a>
+    <!-- Gallery Section -->
+    <div class="section" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="temple.png.jpeg" alt="Temple 1">
+            <img src="temple2.jpeg" alt="Temple 2">
+            <img src="temple3.jfif" alt="Temple 3">
         </div>
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        function toggleDropdown() {
-            var menu = document.getElementById("dropdownMenu");
-            if (menu.style.height === "200px") {
-                menu.style.height = "0";
-            } else {
-                menu.style.height = "200px";
-            }
-        }
-    </script>
+    <!-- Contact Section -->
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>📞 +91 XXXXXXXXXX</p>
+        <p>📍 <a href="https://maps.app.goo.gl/WyiVJQmBKFvHnU3DA" target="_blank">View on Google Maps</a></p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 Pulamankavu Sree Mahadeva Temple. All Rights Reserved.
+    </div>
 
 </body>
 </html>
