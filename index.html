@@ -11,6 +11,34 @@
             font-family: Arial, sans-serif;
             background: #f5f5f5;
         }
+        .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+      
 
         /* Scrollable Navbar */
         .navbar-container {
@@ -174,6 +202,15 @@
         }
     </style>
     <script>
+          function openPopup(imgSrc) {
+    document.getElementById("popupImg").src = imgSrc;
+    document.getElementById("imagePopup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("imagePopup").style.display = "none";
+}
+
         function toggleReadMore(section) {
             var content = document.getElementById(section + "-content");
             var button = document.getElementById(section + "-btn");
@@ -188,6 +225,12 @@
     </script>
 </head>
 <body>
+    <!-- Image Popup -->
+<div id="imagePopup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img id="popupImg" src="" alt="Popup Image">
+</div>
+
     
     <!-- Scrollable Navigation Bar -->
     <div class="navbar-container">
