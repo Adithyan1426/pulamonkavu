@@ -11,6 +11,40 @@
             font-family: Arial, sans-serif;
             background: #f5f5f5;
         }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+        }
+        .scrolling-text {
+            position: absolute;
+            width: 100%;
+            animation: scrollUp 10s linear infinite;
+        }
+        @keyframes scrollUp {
+            0% { top: 100%; }
+            100% { top: -100%; }
+        }
+        h1 {
+            color: #d32f2f;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            font-weight: bold;
+        }
         .popup {
     display: none;
     position: fixed;
@@ -366,6 +400,18 @@ function closePopup() {
             </div>
         </div>
     </div>
+                <div class="container">
+        <h1>🙏 ക്ഷേത്ര زمانی 🙏</h1>
+        <div class="scrolling-text">
+            <p>🔹 നട തുറക്കുന്ന സമയം: രാവിലെ 5:30 AM</p>
+            <p>🔹 ഉഷ:പൂജ: 7:30 AM</p>
+            <p>🔹 ഉച്ചപൂജ: 9:30 AM</p>
+            <p>🔹 നട അടയ്ക്കൽ: 10:00 AM</p>
+            <p>🔹 വൈകുന്നേരം നട തുറക്കൽ: 5:30 PM</p>
+            <p>🔹 ദീപാരാധന: 6:40 PM</p>
+            <p>🔹 അത്താഴപൂജ: 7:30 PM</p>
+            <p>🔹 നട അടയ്ക്കൽ: രാത്രി 8:00 PM</p>
+        </div>
 
     <!-- Contact Section -->
     <div class="section" id="contact">
