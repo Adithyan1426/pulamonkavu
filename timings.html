@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja Timings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .pooja-timings {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+        .marquee-container {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffd700;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            overflow: hidden;
+        }
+        .marquee-text {
+            white-space: nowrap;
+            display: inline-block;
+            animation: scrollText 10s linear infinite;
+        }
+        @keyframes scrollText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pooja-timings">
+        <h2>Pooja Timings</h2>
+        <p>Morning Pooja: 6:00 AM - 7:00 AM</p>
+        <p>Afternoon Pooja: 12:00 PM - 1:00 PM</p>
+        <p>Evening Pooja: 6:00 PM - 7:00 PM</p>
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-text">Temple Special Events and Announcements Scrolling Here...</div>
+    </div>
+
+</body>
+</html>
