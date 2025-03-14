@@ -1,54 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pooja Timings</title>
+    <title>പൂജ സമയക്രമം</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
+        /* പൂജാ സമയക്രമം സെക്ഷൻ */
         .pooja-timings {
-            background-color: #f8f9fa;
+            margin-top: 20px;
+            background: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            font-size: 18px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        .marquee-container {
-            margin-top: 20px;
+
+        /* അനിമേഷൻ ട്രിഗർ (മേൽക്കേറുന്ന സ്വഭാവം) */
+        .pooja-timings.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .pooja-timings h3 {
+            color: #d35400;
+            margin-bottom: 10px;
+        }
+
+        .pooja-timings table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pooja-timings th, .pooja-timings td {
             padding: 10px;
-            background-color: #ffd700;
+            border: 1px solid #ccc;
+        }
+
+        .pooja-timings th {
+            background: goldenrod;
+            color: white;
+        }
+
+        /* ക്ഷേത്ര മാർഗ്ഗനിർദ്ദേശങ്ങൾ സെക്ഷൻ */
+        .guidelines {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f8f8;
             border-radius: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        .marquee-text {
-            white-space: nowrap;
-            display: inline-block;
-            animation: scrollText 10s linear infinite;
+
+        .guidelines.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-        @keyframes scrollText {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
+
+        .guidelines ul {
+            list-style-type: square;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .guidelines li {
+            margin: 5px 0;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
-    <div class="pooja-timings">
-        <h2>Pooja Timings</h2>
-        <p>Morning Pooja: 6:00 AM - 7:00 AM</p>
-        <p>Afternoon Pooja: 12:00 PM - 1:00 PM</p>
-        <p>Evening Pooja: 6:00 PM - 7:00 PM</p>
+    <!-- പൂജാ സമയക്രമം സെക്ഷൻ -->
+    <div class="pooja-timings hidden">
+        <h3>🌺 പൂജാ സമയക്രമം 🌺</h3>
+        <table>
+            <tr>
+                <th>പൂജ</th>
+                <th>സമയം</th>
+            </tr>
+            <tr>
+                <td>ക്ഷേത്രം തുറക്കുന്നത്</td>
+                <td>രാവിലെ 5:30</td>
+            </tr>
+            <tr>
+                <td>ഉഷ പൂജ</td>
+                <td>രാവിലെ 7:30</td>
+            </tr>
+            <tr>
+                <td>ഉച്ച പൂജ</td>
+                <td>രാവിലെ 9:30</td>
+            </tr>
+            <tr>
+                <td>ക്ഷേത്രം അടയ്ക്കൽ</td>
+                <td>രാവിലെ 10:00</td>
+            </tr>
+            <tr>
+                <td>ക്ഷേത്രം വീണ്ടും തുറക്കൽ</td>
+                <td>വൈകുന്നേരം 5:30</td>
+            </tr>
+            <tr>
+                <td>ദീപാരാധന</td>
+                <td>വൈകുന്നേരം 6:40</td>
+            </tr>
+            <tr>
+                <td>അത്താഴ പൂജ</td>
+                <td>രാത്രി 7:30</td>
+            </tr>
+            <tr>
+                <td>ക്ഷേത്രം അടയ്ക്കൽ</td>
+                <td>രാത്രി 8:00</td>
+            </tr>
+        </table>
     </div>
 
-    <div class="marquee-container">
-        <div class="marquee-text">Temple Special Events and Announcements Scrolling Here...</div>
+    <!-- ക്ഷേത്ര മാർഗ്ഗനിർദ്ദേശങ്ങൾ സെക്ഷൻ -->
+    <div class="guidelines hidden">
+        <h3>⚡ ക്ഷേത്ര മാർഗ്ഗനിർദ്ദേശങ്ങൾ ⚡</h3>
+        <ul>
+            <li>ക്ഷേത്രത്തിൽ പ്രവേശിക്കുമ്പോൾ ഭക്തർ പരമ്പരാഗത വസ്ത്രധാരണം പാലിക്കേണ്ടതാണ്.</li>
+            <li>പുരുഷഭക്തർ ക്ഷേത്രത്തിൽ ഷർട്ട് ധരിച്ച് പ്രവേശിക്കരുത്.</li>
+            <li>സ്ത്രീഭക്തർ മുടി അഴിച്ചുവിടരുത്.</li>
+        </ul>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".hidden");
+
+            function revealOnScroll() {
+                elements.forEach((element) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = element.getBoundingClientRect().top;
+
+                    if (elementTop < windowHeight - 50) {
+                        element.classList.add("visible");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Run once in case already in view
+        });
+    </script>
 
 </body>
 </html>
+
